@@ -1,0 +1,36 @@
+html {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+}
+
+body {
+  height: 100%;
+  background: #172638;
+  font-family: 'Mukta', sans-serif;
+  color: #C5D4E8;
+  margin: 0;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+body:before {
+  content: '';
+  height: 60%;
+  width: 20%;
+  background: #16283E;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+
+#root {
+  height: 100%;
+}
+
+@media only screen and (max-width: 900px) { 
+  body:before {
+    display: none;
+  }
+}

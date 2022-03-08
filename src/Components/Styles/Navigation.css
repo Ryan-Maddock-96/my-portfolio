@@ -1,0 +1,181 @@
+nav {
+    display: flex;
+    padding: 25px 75px;
+    height: 115px;
+    box-sizing: border-box;
+}
+
+nav.open {
+    position: fixed;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    animation: navSlideDown 0.5s forwards;
+}
+
+nav.closing + header {
+    display: none;
+}
+
+nav.closed + header {
+    animation: fadeIn 3s forwards; 
+}
+
+nav.closing {
+    position: fixed;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    animation: navSlideUp 1s forwards;
+}
+
+nav.closing svg,
+nav.closing .links,
+nav.closing .closeMenu {
+    animation: fadeOut 0.5s forwards;
+} 
+
+nav.open svg,
+nav.open .links,
+nav.open .closeMenu {
+    animation: fadeIn 1.5s forwards;
+}
+
+nav.closed .menu,
+nav.closed .logo {
+    animation: fadeIn 0.5s forwards;
+}
+
+
+nav.open .links {
+    display: flex;
+    flex-direction: column;
+}
+
+nav.open .menu {
+    display: none;
+}
+
+nav.open .closeMenu {
+    display: flex;
+}
+
+
+nav img {
+    height: 50px;
+    width: 51px;
+}
+
+nav > div {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: flex-end;
+}
+
+nav > div a {
+    font-size: 24px;
+}
+
+nav > div a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    text-decoration-color: #AE8646;
+}
+
+nav > div a:not(:last-of-type) {
+    margin-right: 50px;
+    position: relative;
+}
+
+nav > div a:before,
+nav > div a:after {
+    content: '';
+    display: inline-block;
+    height: 4px;
+    border-radius: 50%;
+    width: 4px;
+    background: #AE8646;
+    margin: 0 2px;
+}
+
+.menu, .closeMenu {
+    display: none;
+    font-size: 30px;
+}
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes navSlideDown {
+      0%{
+          height: 80px;
+      }
+
+      100%{
+          height: 100%;
+      }
+  }
+
+  @keyframes navSlideUp {
+    0%{
+        height: 100%;
+    }
+
+    100%{
+        height: 80px;
+    }
+}
+
+@media only screen and (max-width: 900px) { 
+    body {
+        padding: 0;
+    }
+
+    nav {
+        align-items: center;
+        height: 80px;
+        padding: 10px 25px;
+        background: #16283E;
+    }
+
+    nav.closed, nav.closing {
+        height: 80px;
+    }
+
+    nav.open > div a {
+        font-size: 35px;
+        margin: 0 0 50px;
+    }
+
+    nav > div {
+        display: none;
+    }
+
+    nav > .menu {
+        display: flex;
+    }
+}
+
