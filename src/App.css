@@ -1,0 +1,60 @@
+.animatedSquares {
+    position: absolute;
+    top: 400px;
+    left: 200px;
+    z-index: -1;
+}
+
+.animatedSquares span:nth-child(even) {
+    animation: animate linear 150s infinite;
+
+}
+
+.animatedSquares:nth-child(odd) {
+    animation: animate-flipped linear 150s infinite;
+}
+
+.animatedSquares span,
+.animatedSquares span:before,
+.animatedSquares span:after {
+    position: relative;
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+    background: #1a2c41;
+    margin: 0 100px;
+}
+
+.animatedSquares:nth-child(odd) span {
+    border-radius: 50%;
+}
+
+.animatedSquares span:before,
+.animatedSquares span:after  {
+    content: '';
+    left: 600px;
+}
+
+.animatedSquares span:after  {
+    top: 600px;
+}
+
+@keyframes animate{
+    from{
+      transform: translateY(-400px) rotate(-180deg)
+    }
+    to{
+      transform: translateY(-150%)
+        rotate(360deg)
+    }
+  }
+
+  @keyframes animate-flipped{
+    from{
+      transform: translateY(-400px) rotate(180deg)
+    }
+    to{
+      transform: translateY(-150%)
+        rotate(360deg)
+    }
+  }

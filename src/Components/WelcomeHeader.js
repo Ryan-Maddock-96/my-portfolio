@@ -5,6 +5,10 @@ import {FaGithubSquare, FaLinkedin} from 'react-icons/fa';
 function HelloMessage() {
     return (
         <header>
+
+        <div className='animatedSquares'>
+            {[...Array(10)].map(el => (<span></span>))}
+        </div>
             <MdWavingHand  className='wavingHand'/>
                 <div className='welcome'>
                     <h2>Hi there! I'm</h2>

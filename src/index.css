@@ -12,6 +12,7 @@ body {
   margin: 0;
   font-size: 18px;
   letter-spacing: 2px;
+  overflow: hidden;
 }
 
 body:before {
