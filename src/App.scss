@@ -1,64 +1,28 @@
-.animatedSquares {
-    position: absolute;
-    top: 200px;
-    left: 200px;
-    z-index: -1;
-}
+@import './Components/Styles/Variables.scss';
 
-.animatedSquares span:nth-child(even) {
-    animation: animate linear 150s infinite;
-
-}
-
-.animatedSquares:nth-child(odd) {
-    animation: animate-flipped linear 150s infinite;
-}
-
-.animatedSquares span,
-.animatedSquares span:before,
-.animatedSquares span:after {
-    position: relative;
-    display: inline-block;
-    height: 25px;
-    width: 25px;
-    background: #1a2c41;
-    margin: 0 100px;
-}
-
-.animatedSquares:nth-child(odd) span {
-    border-radius: 50%;
-}
-
-.animatedSquares span:before {
-  content: '';
-  left: 600px;
-  height: 10px; 
-  width: 10px;
-}
-
-.animatedSquares span:after  {
-  content: '';
-  top: 600px;
-  height: 15px;
-  width: 15px;
-}
-
-@keyframes animate{
-    from{
-      transform: translateY(-400px) rotate(-180deg)
-    }
-    to{
-      transform: translateY(-150%)
-        rotate(360deg)
-    }
+section {
+  padding: 50px 75px;
+  
+  &:nth-child(odd) {
+    background: #1A2B40;
   }
 
-  @keyframes animate-flipped{
-    from{
-      transform: translateY(-400px) rotate(180deg)
-    }
-    to{
-      transform: translateY(-150%)
-        rotate(360deg)
+  .title {
+    display: flex;
+    align-items: center;
+    width: 200px;
+    gap: 10px;
+    margin: 0 auto;
+    font-size: 24px;
+    font-weight: bold;
+
+    &:before, 
+    &:after {
+      content: '';
+      flex-grow: 1;
+      height: 2px;
+      display: inline-block;
+      background: $gold;
     }
   }
+}

@@ -7,7 +7,7 @@ function HelloMessage() {
         <header>
 
         <div className='animatedSquares'>
-            {[...Array(10)].map(el => (<span></span>))}
+            {[...Array(10)].map((el,index) => (<span key={index * Math.random()}></span>))}
         </div>
             <MdWavingHand  className='wavingHand'/>
                 <div className='welcome'>
