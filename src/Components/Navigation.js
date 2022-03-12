@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './Styles/Navigation.css';
+import './Styles/Navigation.scss';
 import {HiMenuAlt3} from 'react-icons/hi';
 import {FaTimes} from 'react-icons/fa';
 

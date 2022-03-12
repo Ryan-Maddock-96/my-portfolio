@@ -1,4 +1,4 @@
-import './Styles/WelcomeHeader.css';
+import './Styles/WelcomeHeader.scss';
 import { MdWavingHand } from 'react-icons/md';
 import {FaGithubSquare, FaLinkedin} from 'react-icons/fa';
 
