@@ -3,6 +3,11 @@ nav {
     padding: 25px 75px;
     height: 115px;
     box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(#172638, 0.7%);
+    z-index: 1000;
 
     img {
         height: 50px;

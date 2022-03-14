@@ -1,12 +1,17 @@
 @import './Variables.scss';
+
 header {
+    position: relative;
     display: flex;
     flex-direction: column;
-    padding: 50px 75px 100px;
-    gap: 10px;
+    justify-content: center;
+    gap: 20px;
     align-items: center;
     text-align: center;
     overflow: hidden;
+    min-height:100vh;
+    padding: 115px 0 200px;
+    box-sizing: border-box;
 }
 
 .wavingHand {
@@ -18,29 +23,29 @@ header {
 .welcome {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 25px;
+    line-height: 0.8;
 }
 
 h1 {
     color: #fff;
-    font-size: 115px;
+    font-size: clamp(60px, 8vw, 100px);
     margin: 0;
     padding: 0;
-    line-height: 95px;
 }
 
 h2 {
     color: $gold;
-    font-size: 55px;
+    font-size: clamp(35px, 8vw, 55px);
     margin: 0;
     padding: 0;
-    line-height: 45px;
 }
 
 h3 {
     font-size: 24px;
     font-weight: normal;
     margin: 0;
+    line-height: 1.5;
 }
 
 h3 span {
@@ -76,9 +81,9 @@ a:hover {
 }
 
 .animatedSquares {
-    position: absolute;
+    position: fixed;
     top: 200px;
-    left: 0px;
+    left: -50px;
     z-index: -1;
 }
 
@@ -99,7 +104,7 @@ a:hover {
     height: 25px;
     width: 25px;
     background: #1a2c41;
-    margin: 0 100px;
+    margin: 0 60px;
 }
 
 .animatedSquares:nth-child(odd) span {
@@ -108,14 +113,14 @@ a:hover {
 
 .animatedSquares span:before {
   content: '';
-  left: 600px;
+  left: 400px;
   height: 10px; 
   width: 10px;
 }
 
 .animatedSquares span:after  {
   content: '';
-  top: 600px;
+  top: 300px;
   height: 15px;
   width: 15px;
 }
@@ -154,31 +159,34 @@ a:hover {
 
 
 @media only screen and (max-width: 900px) {
+
+    .wavingHand {
+        font-size: 60px;
+    }
+
     header {
         flex-direction: column;
         align-items: center;
-        padding: 50px 10px;
-        gap: 10px;
-    }
-
-    h1 {
-        font-size: 65px;
+        gap: 30px;
     }
 
     .welcome {
         align-items: center;
         text-align: center;
+        gap: 20px;
     }
 
     h3 {
         text-align: center;
+        font-size: 20px;
+        margin: 10px 0 20px;
     }
 
     .socialLinks {
         justify-content: center;
     }
 
-    .animatedSquares{
-        display: none;
-      }
+    .animatedSquares {
+        left: 0;
+    }
 }

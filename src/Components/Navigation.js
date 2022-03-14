@@ -34,8 +34,8 @@ function Navigation(props) {
                 </svg>
             </a>
             <div className='links'>
-                <a>About</a>
-                <a>Work</a>
+                <a href="#about">About</a>
+                <a href="#projects">Work</a>
                 <a>Contact</a>
             </div>
             <div className='menu' onClick={handleMenu}>
